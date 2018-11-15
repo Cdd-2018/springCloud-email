@@ -1,0 +1,21 @@
+server:
+  port: 9093
+
+spring:
+  application:
+    name: email
+  profiles:
+    active: DEV
+  mail:
+    host: ${email.host}
+    account: ${email.account}
+    password: ${email.password}
+
+
+
+eureka:
+  client:
+    service-url:
+     defaultZone: http://${eureka.user}:${eureka.password}@${eureka.url}:${eureka.port}/eureka
+
+#error.receiver: 1084777354@qq.com
